@@ -9,7 +9,6 @@ function getGeocode(address, callback) {
         } else if (body.features.length === 0) {
             callback('Unable to find location. Try another search.', undefined)
         } else {
-            console.log(body)
             callback(undefined, {
                 latitude: body.features[0].center[1],
                 longitude: body.features[0].center[0],
